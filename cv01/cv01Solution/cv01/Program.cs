@@ -59,8 +59,7 @@ namespace cv01
             }
             Console.WriteLine("uhodnuto");
             Console.WriteLine(cislo);
-
-            //příklad 5
+            
         }
     }
 }

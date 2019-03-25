@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cv05Solution
 {
-   class Hraci
+   public class Hraci
     {
         Hrac[] poleHracu;
         public int Pocet { get; set; }

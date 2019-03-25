@@ -18,9 +18,8 @@ namespace cv04Hra
         {
             random = new Random();
             stats = new Stats();
-            
             InitializeComponent();
-            
+            this.Name = Properties.Resources.Title;
         }
 
         private void toolStripStatusLabel4_Click(object sender, EventArgs e)

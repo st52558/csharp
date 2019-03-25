@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.gridView = new System.Windows.Forms.DataGridView();
             this.Jmeno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Klub = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Goly = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -40,21 +40,21 @@
             this.zrusitButton = new System.Windows.Forms.Button();
             this.konecButton = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             this.SuspendLayout();
             // 
-            // dataGridView1
+            // gridView
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.gridView.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridView.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Jmeno,
             this.Klub,
             this.Goly});
-            this.dataGridView1.Location = new System.Drawing.Point(31, 22);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(344, 203);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
+            this.gridView.Location = new System.Drawing.Point(31, 22);
+            this.gridView.Name = "gridView";
+            this.gridView.Size = new System.Drawing.Size(344, 203);
+            this.gridView.TabIndex = 0;
+            this.gridView.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_1);
             // 
             // Jmeno
             // 
@@ -165,17 +165,17 @@
             this.Controls.Add(this.upravitButton);
             this.Controls.Add(this.vymazButton);
             this.Controls.Add(this.pridejButton);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.gridView);
             this.Name = "Form1";
             this.Text = "Form1";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView gridView;
         private System.Windows.Forms.DataGridViewTextBoxColumn Jmeno;
         private System.Windows.Forms.DataGridViewTextBoxColumn Klub;
         private System.Windows.Forms.DataGridViewTextBoxColumn Goly;

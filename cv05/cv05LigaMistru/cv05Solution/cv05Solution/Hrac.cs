@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace cv05Solution
 {
-    class Hrac
+    public class Hrac
     {
         public string Jmeno { get; set; }
         public FotbalovyKlub Klub { get; set; }

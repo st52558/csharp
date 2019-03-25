@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace cv05Solution
 {
-    enum FotbalovyKlub
+    public enum FotbalovyKlub
     {
-        None, FCPorto, Arsenal, RealMadrid, Chelsea, Barcelona
+        None=0, FCPorto=1, Arsenal=2, RealMadrid=3, Chelsea=4, Barcelona=5
     }
 }

@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.28803.156
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galcon", "Galcon\Galcon.csproj", "{3B721766-F6C5-4194-BB2B-AC8FF4C8A9D3}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Galcon", "Galcon\Galcon.csproj", "{61C123FC-D1AE-4DC1-98DA-00F6E34EDD96}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3B721766-F6C5-4194-BB2B-AC8FF4C8A9D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3B721766-F6C5-4194-BB2B-AC8FF4C8A9D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3B721766-F6C5-4194-BB2B-AC8FF4C8A9D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3B721766-F6C5-4194-BB2B-AC8FF4C8A9D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61C123FC-D1AE-4DC1-98DA-00F6E34EDD96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61C123FC-D1AE-4DC1-98DA-00F6E34EDD96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61C123FC-D1AE-4DC1-98DA-00F6E34EDD96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61C123FC-D1AE-4DC1-98DA-00F6E34EDD96}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {76AC3991-1A2A-4AC5-ABE7-C7F352A8FC2E}
+		SolutionGuid = {CE15602D-4C0D-48E3-8495-B56BDAD6400E}
 	EndGlobalSection
 EndGlobal

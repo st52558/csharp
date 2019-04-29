@@ -4,10 +4,12 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
+using System.Windows.Media;
 
 namespace Galcon
 {
-    abstract class GameObject
+    public abstract class GameObject
     {
         public virtual Point Position { get; set; }
         public virtual int ObjectSize { get; set; }

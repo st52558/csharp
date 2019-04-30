@@ -145,7 +145,13 @@ namespace Galcon
                 myEllipse.MouseLeftButtonDown += ClickLeft;
                 myEllipse.MouseRightButtonDown += ClickRight;
                 canvas.Children.Add(myEllipse);
-                
+                Label planetLabel = new Label();
+                planetLabel.Content = planets.ElementAt(i).NumberOfUnits;
+                planetLabel.Margin = new Thickness(planets.ElementAt(i).Position.X, planets.ElementAt(i).Position.Y, 0, 0);
+                planetLabel.MouseLeftButtonDown += ClickLeft;
+                planetLabel.MouseLeftButtonDown += ClickRight;
+                canvas.Children.Add(planetLabel);
+
                 for (int j = 0; j < 32; j++)
                 {
                     
@@ -165,6 +171,7 @@ namespace Galcon
                     contactPoint.StrokeThickness = 2;
                     contactPoint.Fill = cBrush;
                     canvas.Children.Add(contactPoint);
+
                 }
 
             }
@@ -187,7 +194,7 @@ namespace Galcon
         }
 
 
-        private Point[] CreatePath(Planet a, Planet b)
+        private void CreatePath(Planet a, Planet b)
         {
             Point[] points = new Point[2];
             double distance = double.MaxValue;
@@ -211,7 +218,6 @@ namespace Galcon
             line.Y2 = points[1].Y;
             line.Stroke = System.Windows.Media.Brushes.Black;
             canvas.Children.Add(line);
-            return points;
         }
 
         private double DistanceBetweenPoints(Point a, Point b)

@@ -20,11 +20,13 @@ namespace Galcon
 
         public Planet(Color owner, int size, Point pos)
         {
+            ObjectSize = size;
+            NumberOfUnits = size;
             ContactPoints = new List<Point>();
             RoundPoints = new List<Point>();
             Owner = owner;
             Position = pos;
-            ObjectSize = size;
+            
             for (int i = 0; i < borderPoints; i++)
             {
                 int x = Convert.ToInt32(size * borderRadius / 2 * Math.Cos(2 * Math.PI * i / 32) + pos.X);
@@ -38,39 +40,36 @@ namespace Galcon
         }
         public override void Update(int ms)
         {
-             if (this.Owner != Color.FromRgb(125,125,125) && NumberOfUnits < ObjectSize * 3)
+             if (Owner != Color.FromRgb(125,125,125) && NumberOfUnits < ObjectSize * 3)
              {
-                 double ts = ObjectSize <= 32 ? ObjectSize - 8 : ObjectSize;
-                 double newMs = (Math.Log10(50 - ts) * 10) / 20;
+                 double ts = ObjectSize <= 32 ? ObjectSize/2 - 8 : ObjectSize/2;
+                 double newMs = (Math.Log10(50 - ts) * 20) / 20;
                  if (ms > newMs)
                  {
-
+                    NumberOfUnits++;
                  }
              }
-            if (Owner == Color.FromRgb(200,0,0))
-            {
-                Owner = Color.FromRgb(0, 0, 200);
-            }
-            else
-            {
-                Owner = Color.FromRgb(200, 0, 0);
-            }
+            
         }
 
         public void SpaceShipCame(SpaceShip ship)
         {
-            if (ship.Owner == this.Owner)
+            if (ship.Owner == Owner)
             {
-                this.NumberOfUnits += ship.Units;
+                NumberOfUnits += ship.Units;
             }
             else
             {
-                this.NumberOfUnits -= ship.Units;
-                if (this.NumberOfUnits < 0)
+                NumberOfUnits -= ship.Units;
+                if (NumberOfUnits < 0)
                 {
-                    this.Owner = ship.Owner;
-                    this.NumberOfUnits = Math.Abs(this.NumberOfUnits);
+                    Owner = ship.Owner;
+                    NumberOfUnits = Math.Abs(NumberOfUnits);
                 }
+            }
+            if (ObjectSize * 3 < NumberOfUnits)
+            {
+                NumberOfUnits = ObjectSize * 3;
             }
         }
 

@@ -19,21 +19,34 @@ namespace Galcon
         public override Point Position { get; set; }
         public override void Update(int ms)
         {
-            DistanceTraveled += ms / 8;
-            if (DistanceTraveled < Path.Count())
+            if (!Done)
             {
-                for (int i = 0; i < DistanceTraveled; i++)
+                DistanceTraveled = ms / 8;
+                if (DistanceTraveled < Path.Count)
                 {
-                    Path.RemoveAt(0);
+                    for (int i = 0; i < DistanceTraveled; i++)
+                    {
+                        Path.RemoveAt(0);
+                    }
+                    Position = Path.ElementAt(0);
                 }
-                Position = Path.ElementAt(0);
+                else
+                {
+                    ArivalPlanet.SpaceShipCame(this);
+                    Done = true;
+                }
             }
-            else
-            {
-                ArivalPlanet.SpaceShipCame(this);
-                this.Done = true;
-            }
+        }
 
+        public SpaceShip(Planet from, Planet to, int units, List<Point> path)
+        {
+            DeparturePlanet = from;
+            from.NumberOfUnits -= units;
+            ArivalPlanet = to;
+            Units = units;
+            Path = path;
+            Position = path.ElementAt(0);
+            Owner = from.Owner;
         }
 
 

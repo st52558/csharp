@@ -5,8 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Galcon"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800" ResizeMode="NoResize" Background="White">
     <Grid>
-        <Canvas x:Name="canvas" HorizontalAlignment="Left" Height="419" VerticalAlignment="Top" Width="792" Uid="canvas" Loaded="Canvas_Loaded"/>
+        <Canvas x:Name="canvas" Uid="canvas" Loaded="Canvas_Loaded" Margin="0,0,0,0" Width="800" Height="450" MouseWheel="Canvas_MouseWheel" Background="White"/>
     </Grid>
 </Window>
